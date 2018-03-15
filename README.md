@@ -1,2 +1,3 @@
 # ItemBook
-memo
+## Purpose
+- For paractice of Rails
