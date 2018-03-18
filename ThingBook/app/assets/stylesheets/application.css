@@ -13,3 +13,39 @@
  *= require_tree .
  *= require_self
  */
+body {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    /*position: fixed;*/
+    font-size: 15px;
+    height: 50px;
+    background-color: rgba(234, 97, 125 ,0.8);
+    width: 100%;
+}
+
+.container {
+    max-width: 2000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+header li {
+    background-color: #ea617d;
+    float: left;
+    height: 50px;
+    padding: 0 20px;
+    line-height: 50px;
+    letter-spacing: 3px;
+}
