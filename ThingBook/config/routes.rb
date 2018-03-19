@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'users/index' => 'users#index'
+  get 'users/signup' => 'users#new'
+  post 'users/create' => 'users#create'
+  post 'users/destroy' => 'users#destroy'
+  get 'users/login' => 'users#login_form'
+  post 'users/login' => 'users#login'
+  get 'users/:id' => 'users#show'
+
   get '/' => 'home#top'
 
   # The priority is based upon order of creation: first created -> highest priority.

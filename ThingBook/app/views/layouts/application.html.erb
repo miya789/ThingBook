@@ -7,7 +7,18 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+  <header>
+      <div class="container">
+          <ul>
+              <li>Home</li>
+              <li>About</li>
+              <li>Things</li>
+              <li>
+                  <%= link_to("Login", "/users/login") %>
+              </li>
+          </ul>
+      </div>
+  </header>
 <%= yield %>
 
 </body>
