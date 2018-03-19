@@ -41,11 +41,28 @@ header ul {
     margin: 0;
 }
 
-header li {
+.header-right li {
     background-color: #ea617d;
     float: left;
     height: 50px;
     padding: 0 20px;
     line-height: 50px;
     letter-spacing: 3px;
+}
+
+.header-right a {
+    display: block;
+    color: white;
+}
+
+.btn {
+    opacity: 0.7;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.btn:active {
+    line-height: 55px;
 }
