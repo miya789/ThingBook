@@ -1,0 +1,73 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
+body {
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+header {
+    /*position: fixed;*/
+    font-size: 15px;
+    height: 50px;
+    background-color: rgba(234, 97, 125 ,0.8);
+    width: 100%;
+}
+
+.container {
+    max-width: 2000px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header ul {
+    float: right;
+    padding: 0;
+    margin: 0;
+}
+
+.header-left {
+    float: left;
+}
+
+.header-right li {
+    background-color: #ea617d;
+    float: left;
+    height: 50px;
+    padding: 0 20px;
+    line-height: 50px;
+    letter-spacing: 3px;
+}
+
+.header-right a {
+    display: block;
+    color: white;
+}
+
+.btn {
+    opacity: 0.5;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+.btn:active {
+    line-height: 55px;
+}
