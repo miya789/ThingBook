@@ -41,6 +41,10 @@ header ul {
     margin: 0;
 }
 
+.header-left {
+    float: left;
+}
+
 .header-right li {
     background-color: #ea617d;
     float: left;
