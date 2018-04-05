@@ -1,0 +1,7 @@
+<h1>Create</h1>
+
+<%= form_tag("/things/create") do %>
+    <p>Name</p>
+    <input name="name" value="<% @thing.name %>"></input>
+    <input type="submit" value="create"></input>
+<% end %>
