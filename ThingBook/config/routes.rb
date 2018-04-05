@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'things/index' => 'things#index'
+  get 'things/new' => 'things#new'
+  post 'things/create' => 'things#create'
   get 'things/:id' => 'things#show'
 
   get 'users/index' => 'users#index'

@@ -1,5 +1,9 @@
 <h1>Things#index</h1>
 <p>Find me in app/views/things/index.html.erb</p>
+<div>
+    <%= link_to("Create", "/things/new") %>
+</div>
+
 <ul>
     <% @things.each do |thing| %>
         <li><%= link_to("#{thing.name}", "/things/#{thing.id}") %></li>
