@@ -43,6 +43,14 @@ header ul {
 
 .header-left {
     float: left;
+    height: 50px;
+    padding: 0 20px;
+    line-height: 50px;
+}
+
+.header-left a {
+    display: block;
+    color: white;
 }
 
 .header-right li {
