@@ -13,7 +13,8 @@ class ThingsController < ApplicationController
 
   def create
     @thing = Thing.new(
-      name: params[:name]
+      name: params[:name],
+      category: params[:category]
     )
     if @thing.save
       redirect_to("/things/index")

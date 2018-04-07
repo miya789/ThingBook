@@ -6,6 +6,18 @@
 
 <ul>
     <% @things.each do |thing| %>
-        <li><%= link_to("#{thing.name}", "/things/#{thing.id}") %></li>
+        <% if thing.category == "clothes" %>
+            <div class="clothes">
+                <li><%= link_to("#{thing.name}", "/things/#{thing.id}") %></li>
+            </div>
+        <% elsif thing.category == "book" %>
+            <div class="book">
+                <li><%= link_to("#{thing.name}", "/things/#{thing.id}") %></li>
+            </div>
+        <% else %>
+            <div>
+                <li><%= link_to("#{thing.name}", "/things/#{thing.id}") %></li>
+            </div>
+        <% end %>
     <% end %>
 </ul>
