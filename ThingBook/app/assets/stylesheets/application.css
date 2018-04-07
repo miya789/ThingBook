@@ -78,3 +78,21 @@ header ul {
 .btn:active {
     line-height: 55px;
 }
+
+.thing {
+    width: 45%;
+    height: 100px;
+    margin-top: 10px;
+    display: inline-block;
+    text-align: center;
+    line-height: 100px;
+    background-color: #38b48b;
+}
+
+.clothes {
+    background-color: #4c6cb3;
+}
+
+.book {
+    background-color: #d3a243;
+}

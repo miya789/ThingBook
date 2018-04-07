@@ -4,20 +4,20 @@
     <%= link_to("Create", "/things/new") %>
 </div>
 
-<ul>
+<div class="container">
     <% @things.each do |thing| %>
         <% if thing.category == "clothes" %>
-            <div class="clothes">
-                <li><%= link_to("#{thing.name}", "/things/#{thing.id}") %></li>
+            <div class="thing clothes">
+                <%= link_to("#{thing.name}", "/things/#{thing.id}") %>
             </div>
         <% elsif thing.category == "book" %>
-            <div class="book">
-                <li><%= link_to("#{thing.name}", "/things/#{thing.id}") %></li>
+            <div class="thing book">
+                <%= link_to("#{thing.name}", "/things/#{thing.id}") %>
             </div>
         <% else %>
-            <div>
-                <li><%= link_to("#{thing.name}", "/things/#{thing.id}") %></li>
+            <div class="thing">
+                <%= link_to("#{thing.name}", "/things/#{thing.id}") %>
             </div>
         <% end %>
     <% end %>
-</ul>
+</div>
