@@ -4,6 +4,10 @@
     <p>Name</p>
     <input name="name" value="<%= @thing.name %>"></input>
     <p>Category</p>
-    <input name="category" value="<%= @thing.category %>"></input>
+    <select name="category" value="<%= @thing.category %>">
+        <option value="">blank</option>
+        <option value="book">book</option>
+        <option value="clothes">clothes</option>
+    </select>
     <input type="submit" value="update"></input>
 <% end %>
