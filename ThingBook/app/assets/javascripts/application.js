@@ -19,7 +19,7 @@ $(function() {
         $('.filter-item').removeClass('active');
         var id = $(this).attr('id');
 
-        $('.thing').fadeOut();
+        $('.thing').fadeOut(0);
         
         if (id == 'all') {
           $(this).addClass('active');
