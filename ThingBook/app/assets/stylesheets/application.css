@@ -96,3 +96,23 @@ header ul {
 .book {
     background-color: #d3a243;
 }
+
+
+.filter-item {
+    background-color: #fff;
+    color: #323a45;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: "Dosis", sans-serif;
+    font-size: 16px;
+    margin: 10px 5px 0 0;
+    padding: 8px 16px;
+    display: inline-block;
+    transition: all .3s;
+}
+
+.filter-item.active {
+    background: #009ca8;
+    color: #fff;
+    cursor: default;
+}

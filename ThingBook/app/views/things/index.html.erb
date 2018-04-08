@@ -4,6 +4,18 @@
     <%= link_to("Create", "/things/new") %>
 </div>
 
+<div>
+    <div id="all" class="filter-item active">
+        All
+    </div>
+    <div id="books" class="filter-item">
+        Book
+    </div>
+    <div id="clothes" class="filter-item">
+        Clothes
+    </div>
+</div>
+
 <div class="container">
     <% @things.each do |thing| %>
         <% if thing.category == "clothes" %>

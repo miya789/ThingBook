@@ -14,3 +14,24 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$(function() {
+    $('p').css("color", "red");
+
+    $('.filter-item').click(function() {
+        $('.filter-item').removeClass('active');
+        var id = $(this).attr('id');
+
+        $('.thing').fadeOut();
+        
+        if (id == 'all') {
+          $(this).addClass('active');
+          $('.thing').fadeIn();
+        } else if (id == 'books') {
+          $(this).addClass('active');
+          $('.book').fadeIn();
+        } else if (id == 'clothes') {
+          $(this).addClass('active');
+          $('.clothes').fadeIn();
+        }
+    });
+});
