@@ -15,8 +15,6 @@
 //= require turbolinks
 //= require_tree .
 $(function() {
-    $('p').css("color", "red");
-
     $('.filter-item').click(function() {
         $('.filter-item').removeClass('active');
         var id = $(this).attr('id');
