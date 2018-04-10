@@ -1,35 +1,37 @@
-<h1>Things#index</h1>
-<p>Find me in app/views/things/index.html.erb</p>
-<div>
-    <%= link_to("Create", "/things/new") %>
-</div>
-
-<div>
-    <div id="all" class="filter-item active">
-        All
+<div class="contents">
+    <h1>Things#index</h1>
+    <p>Find me in app/views/things/index.html.erb</p>
+    <div>
+        <%= link_to("Create", "/things/new") %>
     </div>
-    <div id="books" class="filter-item">
-        Book
+    
+    <div>
+        <div id="all" class="filter-item active">
+            All
+        </div>
+        <div id="books" class="filter-item">
+            Book
+        </div>
+        <div id="clothes" class="filter-item">
+            Clothes
+        </div>
     </div>
-    <div id="clothes" class="filter-item">
-        Clothes
-    </div>
-</div>
-
-<div class="container">
-    <% @things.each do |thing| %>
-        <% if thing.category == "clothes" %>
-            <div class="thing clothes">
-                <%= link_to("#{thing.name}", "/things/#{thing.id}") %>
-            </div>
-        <% elsif thing.category == "book" %>
-            <div class="thing book">
-                <%= link_to("#{thing.name}", "/things/#{thing.id}") %>
-            </div>
-        <% else %>
-            <div class="thing">
-                <%= link_to("#{thing.name}", "/things/#{thing.id}") %>
-            </div>
+    
+    <div class="container">
+        <% @things.each do |thing| %>
+            <% if thing.category == "clothes" %>
+                <div class="thing clothes">
+                    <%= link_to("#{thing.name}", "/things/#{thing.id}") %>
+                </div>
+            <% elsif thing.category == "book" %>
+                <div class="thing book">
+                    <%= link_to("#{thing.name}", "/things/#{thing.id}") %>
+                </div>
+            <% else %>
+                <div class="thing">
+                    <%= link_to("#{thing.name}", "/things/#{thing.id}") %>
+                </div>
+            <% end %>
         <% end %>
-    <% end %>
+    </div>
 </div>
