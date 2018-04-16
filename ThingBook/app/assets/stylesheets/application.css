@@ -79,6 +79,14 @@ header ul {
     line-height: 55px;
 }
 
+.user {
+    background-color: green;
+}
+
+.super-user {
+    background-color: red;
+}
+
 .thing {
     width: 45%;
     height: 100px;

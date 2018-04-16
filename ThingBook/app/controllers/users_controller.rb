@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
   def index
+    if session[:super_user_flag]
+      @users = User.all()
+    else
+      redirect_to("/users/#{@current_user.id}")
+    end
   end
 
   def show

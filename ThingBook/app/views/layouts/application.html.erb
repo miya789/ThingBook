@@ -11,7 +11,15 @@
     <div class="container">
       <div class="header-left">
         <div class="btn user_info">
-          <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}") %>
+          <% if session[:super_user_flag] %>
+            <div class="super-user">
+              <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}") %>
+            </div>
+          <% elsif %>
+            <div class="user">
+              <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}") %>
+            </div>
+          <% end %>
         </div>
       </div>
       <div class="header-right">
