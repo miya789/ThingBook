@@ -10,9 +10,9 @@
   <header>
     <div class="container">
       <div class="header-left">
-        <div class="btn user_info">
-          <% if session[:super_user_flag] %>
-            <div class="super-user">
+        <div class="btn current-user-info">
+          <% if session[:admin_flag] %>
+            <div class="admin user">
               <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}") %>
             </div>
           <% elsif %>

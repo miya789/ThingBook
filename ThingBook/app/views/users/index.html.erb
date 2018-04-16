@@ -2,8 +2,14 @@
 <p>Find me in app/views/users/index.html.erb</p>
 <div class="container">
     <% @users.each do |user| %>
-        <div class="user">
-            <%= link_to("#{user.name}", "/users/#{user.id}") %>
-        </div>
+        <% if user.category == "admin" %>
+            <div class="user-info admin">
+                <%= link_to("#{user.name}", "/users/#{user.id}") %>
+            </div>
+        <% elsif %>
+            <div class="user-info">
+                <%= link_to("#{user.name}", "/users/#{user.id}") %>
+             </div>
+        <% end %>
     <% end %>
 </div>
