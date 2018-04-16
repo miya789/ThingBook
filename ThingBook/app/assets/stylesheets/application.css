@@ -79,7 +79,14 @@ header ul {
     line-height: 55px;
 }
 
-.thing {
+.user a {
+    background-color: green;
+    line-height: 30px;
+    margin: 10px 0;
+}
+
+
+.thing, .user-info {
     width: 45%;
     height: 100px;
     margin-top: 10px;
@@ -87,6 +94,16 @@ header ul {
     text-align: center;
     line-height: 100px;
     background-color: #38b48b;
+}
+
+.admin {
+    background-color: red;
+}
+
+.admin a {
+    background-color: red;
+    line-height: 30px;
+    margin: 10px 0;
 }
 
 .clothes {

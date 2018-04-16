@@ -10,8 +10,16 @@
   <header>
     <div class="container">
       <div class="header-left">
-        <div class="btn user_info">
-          <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}") %>
+        <div class="btn current-user-info">
+          <% if session[:admin_flag] %>
+            <div class="admin user">
+              <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}") %>
+            </div>
+          <% elsif %>
+            <div class="user">
+              <%= link_to("#{@current_user.name}", "/users/#{@current_user.id}") %>
+            </div>
+          <% end %>
         </div>
       </div>
       <div class="header-right">
