@@ -8,7 +8,7 @@ jobs:
     - uses: andrewmcodes/rubocop-linter-action@v3.2.0
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    - uses: ruby/setup-ruby@ec106b438a1ff6ff109590de34ddc62c540232e0
+    - uses: ruby/setup-ruby@1
       with:
         ruby-version: 2.7.1
     - uses: actions/cache@v1
