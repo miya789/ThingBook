@@ -11,6 +11,6 @@ jobs:
         with:
           ruby-version: 3.0.0
       - name: RuboCop Linter Action
-          uses: andrewmcodes/rubocop-linter-action@v3.3.0
+        uses: andrewmcodes/rubocop-linter-action@v3.3.0
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
