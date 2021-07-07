@@ -1,0 +1,23 @@
+name: reviewdog
+on: [pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: andrewmcodes/rubocop-linter-action@v3.2.0
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7.1
+    - uses: actions/cache@v1
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gem-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gem-
+    - run: |
+        gem install bundler
+        bundle install --path vendor/bundle --without production
+    - run: bundle exec rubocop
